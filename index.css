@@ -1,0 +1,15 @@
+body {
+  font-family: Georgia, serif;
+  margin: 40px;
+  max-width: 38rem;
+  padding: 2rem;
+}
+td {
+    font-family: Bookman, URW Bookman L, serif;
+    background-color: hsla(195, 100%, 75%, 0.2);
+    border-radius: 15px
+}
+th {
+    background-color: hsla(195, 100%, 75%, 0.4);
+    border-radius: 15px
+}
