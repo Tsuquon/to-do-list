@@ -9,16 +9,29 @@
 </head>
 <body>
     <h1 align:"center">To Do List</h1>
-    <p align:left>Lorem ipsum</p>
-    <table style="width:500px; height:50px; border:5px white;">
+    <table id="myTable" ; style="width:500px; height:50px; border:5px white;">
         <tr>
-            <th style="width: 110px";>Completed</th>
+            <th style="width: 110px" ;>Completed</th>
             <th>Task</th>
         </tr>
         <tr>
-            <td align="center"><input type="checkbox";></td>
-            <td style="padding:10px"; contenteditable="true">Insert Task Here</td>
+            <td align="center"><input type="checkbox" ; id="checkBox"></td>
+            <td contenteditable="true">Insert Task Here</td>
         </tr>
     </table>
+    <p align="center"><button type="button" onclick="createRow()">Add new Task</button></p>
+
+
+    <script>
+        function createRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(2);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "Button";
+            cell2.innerHTML = "Insert Task Here";
+        }
+    </script>
+
 </body>
 </html>
