@@ -11,36 +11,33 @@
     <h1 align:"center">To Do List</h1>
     <table id="myTable" ; style="width:500px; height:50px; border:5px white;">
         <tr>
-            <th style="width: 110px" ;>Completed</th>
+            <th style="width: 110px">Completed</th>
             <th>Task</th>
+            <th style="width: 110px">Remove</th>
         </tr>
         <tr>
-            <td align="center"; id="checkBox"><input type="checkbox"; id="actualCheckBox"></td>
+            <td align="center"><input type="checkbox" /></td>
             <td contenteditable="true">Insert Task Here</td>
+            <td align="center"><button class="btnDelete">Delete</button></td>
         </tr>
     </table>
-    <p align="center"><button type="button" onclick="createRow()">Add new Task</button></p>
+    <p align="left"><button type="button" onclick="createRow()">Add new Task</button></p>
 
 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         function createRow() {
-            document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td align="center"><input type="checkbox"; id="actualCheckBox"></textarea></td><td contenteditable="true">Insert Task Here</td></tr>';
-
-
-
-
-
-            /* var table = document.getElementById("myTable");
-            var row = table.insertRow(2);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            cell1.id = "newRow"
-            var checkbox = document.createElement('input');
-            checkbox.type = "checkbox"
-            var element = document.getElementById("myTable")
-            cell1.innerHTML = element.appendChild(checkbox);
-            cell2.innerHTML = "Insert Task Here"; */
+            document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td align="center"><input type="checkbox"></td><td contenteditable="true">Insert Task Here</td><td align="center"><button class="btnDelete">Delete</button></td></tr>';
         }
+
+        $(document).ready(function () {
+
+            $("#myTable").on("click", ".btnDelete", function () {
+                $(this).closest("tr").remove();
+            });
+
+        });
+
     </script>
 
 </body>
