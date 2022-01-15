@@ -15,7 +15,7 @@
             <th>Task</th>
         </tr>
         <tr>
-            <td align="center"><input type="checkbox" ; id="checkBox"></td>
+            <td align="center"; id="checkBox"><input type="checkbox"; id="actualCheckBox"></td>
             <td contenteditable="true">Insert Task Here</td>
         </tr>
     </table>
@@ -24,12 +24,22 @@
 
     <script>
         function createRow() {
-            var table = document.getElementById("myTable");
+            document.getElementById("myTable").insertRow(-1).innerHTML = '<tr><td align="center"><input type="checkbox"; id="actualCheckBox"></textarea></td><td contenteditable="true">Insert Task Here</td></tr>';
+
+
+
+
+
+            /* var table = document.getElementById("myTable");
             var row = table.insertRow(2);
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
-            cell1.innerHTML = "Button";
-            cell2.innerHTML = "Insert Task Here";
+            cell1.id = "newRow"
+            var checkbox = document.createElement('input');
+            checkbox.type = "checkbox"
+            var element = document.getElementById("myTable")
+            cell1.innerHTML = element.appendChild(checkbox);
+            cell2.innerHTML = "Insert Task Here"; */
         }
     </script>
 

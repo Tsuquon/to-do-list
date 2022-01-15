@@ -9,12 +9,16 @@ body {
     background-size: cover;
 }
 td {
-    font-family: Bookman, URW Bookman L, serif;
-    background-color: hsla(195, 100%, 75%, 0.2);
+    color: black ;
+    background-color: hsla(195, 100%, 75%, 0.6);
     border-radius: 15px;
     padding: 10px
 }
 th {
-    background-color: hsla(195, 100%, 75%, 0.4);
+    background-color: hsla(195, 100%, 75%, 0.8);
+    color: dimgray ;
     border-radius: 15px
+}
+#myRow {
+    background-color: blue;
 }
